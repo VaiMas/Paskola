@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form action="#" method="post">
+<div class="mp3" style="width: 200px;">
+  <label for="suma" class="form-label">Paskolos dydis</label>
+  <input type="number" name="suma" class="form-control" placeholder="suma" >
+</div>
+<div class="mp3" style="width: 200px;">
+  <label for="terminas" class="form-label">Termimas(menesiais)</label>
+  <input type="number" name = "terminas" class="form-control" placeholder="termimas">
+</div>
+<div class="mp3" style="width: 200px;">
+  <label for="palukanos" class="form-label">Palukanos</label>
+  <input type="number" name = "palukanos"  class="form-control" placeholder="palukanos" min="0" max="100">
+</div>
+    <p></p>
+    <p><input type="submit" value="submit"/></p>
+</form>
+{% endblock content %}
+
