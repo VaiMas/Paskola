@@ -1,6 +1,6 @@
-from Paskola import Paskola
+from Paskola import Paskola, data_list, duomenys
+import csv
 
-listas =[]
 paskola = Paskola(0, 0, 0)
 while True:
     try:
@@ -16,9 +16,14 @@ while True:
             paskola.paskolos_informacija()
         elif pasirinkimas == 3:
             paskola.mokejimo_grafikas()
+            with open(f'Paskola.csv', 'a', newline='') as file:
+                writer = csv.writer(file)
+                writer.writerow(data_list)
+                for row in duomenys:
+                    row = row.split(',')
+                    writer.writerow(row)
         elif pasirinkimas == 4:
             print("Programa baigta")
             break
     except:
         print("Neteisingas pasirinkimas")
-
